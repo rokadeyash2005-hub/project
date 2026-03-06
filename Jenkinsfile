@@ -1,8 +1,25 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build') { steps { echo 'Compiling code...' } }
-        stage('Test') { steps { echo 'Running tests...' } }
-        stage('Deploy') { steps { echo 'Moving to server...' } }
+
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/rohanshinde8080/portfolio-website.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building Portfolio Website'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Portfolio Website'
+            }
+        }
+
     }
 }
