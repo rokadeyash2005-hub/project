@@ -5,19 +5,19 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/rohanshinde8080/portfolio-website.git'
+                git 'https://github.com/rokadeyash2005-hub/project.git'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Building Portfolio Website'
+                echo 'Building website'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying Portfolio Website'
+                echo 'Deploying  Website'
             }
         }
 
